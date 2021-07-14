@@ -4,6 +4,9 @@ body{
     padding: 0%;
  font-family: 'Poppins', sans-serif;
 }
+
+/* --------Banner Part style
+---------------- */
 .banner{
  background-color: #2D25A0;
  height: 500px;
@@ -12,33 +15,44 @@ body{
  justify-content: center;
  align-items: center;
  padding-bottom: 40px;
-
 }
 .left-banner{
-
 margin-left:20%;
 color: white;
 font-size: 28px;
 font-weight: 700px;
-
 }
 .left-banner > button{
     padding: 17px 45px;
     background-color: #E02C6D;
     color: white;
 }
+.button-style{
+    transition: 2s;
+}
+.button-style:hover{
+    transform: rotate(360deg);
+}
 
 .right-banner > img{
 width:60%;
 }
+.image-style{
+    transition: 2s;
+}
+.image-style:hover{
+    transform: translate(20px,30px);
+}
+
+/* --------Card design part
+---------------- */
 .player-cards{
     background-color: yellow;
     justify-content: center;
     align-items: center;
 }
 .cards{
-    background-color: white;
- 
+ background-color: white;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
@@ -46,18 +60,15 @@ align-items: center;
 margin-top:60px;
 }
 .card{
-    width: 300px;
- height: 450px;
-border: 1px solid gray;
-box-shadow: 10px 10px 10px gainsboro;
+ width: 300px;
+height: 450px;
+box-shadow: 10px 10px 10px 10px gainsboro;
 margin-left: 40px;
 margin-right: 40px;
 margin-bottom: 40px;
 padding-bottom: 10px;
-
-
-
 }
+
 .card > img{
     width: 90%;
     padding: 15px;
@@ -65,9 +76,34 @@ padding-bottom: 10px;
 .card-title, .card-description{
 padding-left: 10px;
 }
+
+/* --------Animanation Ball Style
+---------------- */
+.game-ball{
+    width: 20%;
+    animation-name:animation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+@keyframes animation {
+    0%   {left:0px; top:0px;}
+    25%  { left:1200px; top:0px;}
+    50%  { left:1200px; top:80px;}
+    75%  { left:0px; top:100px;}
+    100% { left:0px; top:0px;}
+  }
 hr{
 margin-top: 150px;
 }
+
+/* --------Footer Part style
+---------------- */
+
 .footer{
     justify-content: center;
     align-items: center;
@@ -89,4 +125,24 @@ color: gray;
 .copy-right{
     text-align: center;
     ;
+}
+
+/* Responsive design style */
+@media (max-width:700px) {
+    .banner{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .left-banner{
+        font-size:15px;
+        }
+}
+@media (min-width:900px) {
+    .banner{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+   
 }
