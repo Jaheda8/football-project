@@ -138,11 +138,5 @@ color: gray;
         font-size:15px;
         }
 }
-@media (min-width:900px) {
-    .banner{
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        align-items: center;
-    }
+
    
-}
